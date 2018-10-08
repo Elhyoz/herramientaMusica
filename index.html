@@ -12,24 +12,104 @@
 </head>
 
 <body>
-  <div class="container-fixed">
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo"><i class="material-icons md-48">home</i></a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li> <a href="profile.html"><i class="material-icons md-36">account_circle</i></li></a>
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="badges.html">Components</a></li>
-          <li><a href="collapsible.html">JavaScript</a></li>
-        </ul>
+  <div class="content">
+    <main>
+
+    </main>
+    <div class="flex-container">
+
+      <nav class="nav-wrapper nav-home">
+        <div class="container-fluid">
+          <a href="#" class="brand-logo"><i class="material-icons md-48">home</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li> <a href="#"><i class="material-icons md-36">account_circle</i></li></a>
+            <li><a href="#">Sass</a></li>
+            <li><a href="#">Components</a></li>
+            <li><a href="#">JavaScript</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="student-content container-fluid">
+
+      <div class="menu-flex">
+        <div class="menu-container">
+          <aside>
+            <i class="material-icons md-36" id="buttonMenu" >menu</i>
+           
+          </aside>
+        </div>
       </div>
-    </nav>
+
+      <h1>Aquí va el contenido del estudiante</h1>
+      <p class="texto-relleno">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut rem quis impedit delectus nihil quasi maxime
+        incidunt illo ea sapiente saepe aliquid aspernatur distinctio iure ut, dolores nesciunt, sequi consequatur?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit delectus perferendis, quisquam incidunt iure
+        temporibus officiis magnam doloribus dolores autem porro maxime nihil rerum nisi aspernatur atque, cupiditate
+        eum molestiae?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, beatae molestias. Voluptatem nam amet possimus
+        saepe, magni quis illo minus voluptas ipsam minima, consequatur quaerat optio numquam! Velit, porro aperiam.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt natus distinctio, nobis, tenetur aspernatur
+        dolorem repellat hic laboriosam sed delectus quaerat eius praesentium. Officia iusto assumenda sed, accusantium
+        aliquam eaque?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque sequi eum culpa nesciunt magnam iure
+        reiciendis dolor voluptatibus, sunt nulla necessitatibus placeat cupiditate voluptas saepe, et fugit
+        praesentium illo aliquid!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quos eos corporis rerum tenetur aliquid
+        assumenda fugit mollitia omnis accusamus sint odit laboriosam iusto, quasi nam hic animi quod pariatur?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, in. Repudiandae maxime consequatur velit?
+        In est nesciunt distinctio, aut consectetur aliquam rerum sunt asperiores totam laboriosam ipsam eum nostrum
+        veritatis!
+      </p>
+    </div>
+
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Soy un footer</h5>
+
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="rebelde.html">Soy un link. No me des click. c:</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2018 Copyright Text
+          <a class="grey-text text-lighten-4 right" href="#!">Más links acá </a>
+        </div>
+      </div>
+    </footer>
+
+
   </div>
 </body>
 <style type="text/css">
-  a.brand-logo {
-    align-self: center;
-    margin-right: 50px !important;
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .menu-flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-right: 20px;
+  }
+
+  .menu-container {
+    align-self: flex-start;
+  }
+
+  #buttonMenu{
+    cursor: pointer;
   }
 
   .material-icons.md-48 {
@@ -39,7 +119,18 @@
   .material-icons.md-36 {
     font-size: 36px;
   }
+
+  p.texto-relleno {
+    font-size: 18px;
+  }
+
+  .student-container {
+    display: inline-flex;
+  }
+
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+<script type="text/javascript">
+  
+</script>
 </html>
