@@ -5,10 +5,10 @@ Posteriormente se irán añadiendo más instrumentos de cuerda que tengan que ve
 
 
 ## Requerimentos:
- ..*Xampp (Esta se cambiará a futuro)
+ *Xampp (Esta se cambiará a futuro)
 
 
- ..*PHP 7
+ *PHP 7
 
 
- ..*Bootstrap 4
+ *Bootstrap 4
