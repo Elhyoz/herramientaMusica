@@ -31,10 +31,14 @@
       return $conexion->insert_id;
     }
 
-    function limpiarCadena($str){
-      global $conexion;
-      $str = mysqli_real_escape_string($conexion, trim($str));
-      return htmlspecialchars($str);
+    function limpiarCadena($var){
+      if( isset($var) ){
+        global $conexion;
+        $str = mysqli_real_escape_string($conexion, trim($var));
+        return htmlspecialchars($str);
+      }
+      else
+        return "null";
     }
   }
 
