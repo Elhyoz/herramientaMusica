@@ -16,7 +16,7 @@
   <!-- Comienza el navbar -->
   <div class="nav-container">
 
-    <nav class="navbar navbar-dark bg-dark navbar-expand-md sticky-top">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
       <a href="" class="navbar-brand">GuitarTuto</a>
       <ul class="navbar-nav">
 

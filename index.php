@@ -23,7 +23,7 @@
 
             <div class="modal-body">
 
-              <form action="#" method="post">
+              <form action="" method="post" id="targetSignUp">
                 <div class="form-group">
                   <label for="uname">Correo o usuario:</label>
                   <input type="text" class="form-control" id="usr" name="username">
@@ -58,31 +58,31 @@
             </div>
 
             <div class="modal-body">
-              <form action="#" method="post">
+              <form action="" method="post" id="targetRegister">
                 <div class="form-group">
 
                   <div class="form-group">
                     <label for="uname">Nombre(s):</label>
-                    <input type="text" class="form-control" id="usr" name="username">
+                    <input type="text" class="form-control" id="nameUser" name="username">
                   </div>
 
                   <div class="form-group">
                     <label for="uname">Apellido Paterno:</label>
-                    <input type="text" class="form-control" id="usr" name="username">
+                    <input type="text" class="form-control" id="apP" name="username">
                   </div>
 
                   <div class="form-group">
                     <label for="uname">Apellido Materno:</label>
-                    <input type="text" class="form-control" id="usr" name="username">
+                    <input type="text" class="form-control" id="apM" name="username">
                   </div>
 
                   <div class="form-group">
                     <label for="uname">Número de boleta:</label>
-                    <input type="number" class="form-control" id="usr" name="username">
+                    <input type="number" class="form-control" id="numBoleta" name="username">
                   </div>
 
                   <label for="uname">Correo:</label>
-                  <input type="text" class="form-control" id="usr" name="username">
+                  <input type="text" class="form-control" id="email" name="username">
                 </div>
 
                 <div class="form-group">
@@ -92,19 +92,19 @@
 
                 <div class="form-group">
                   <label for="repeatPwd">Repite la contraseña:</label>
-                  <input type="password" class="form-control" id="pwd" name="password">
+                  <input type="password" class="form-control" id="repeatPwd" name="password">
                 </div>
 
                 <div class="form-group">
                   <label for="sel1">Eres ... </label>
-                  <select class="form-control" id="sel1">
+                  <select class="form-control" id="usrLevel">
                     <option>Alumno</option>
                     <option>Maestro</option>
                     <option>Ad</option>
                   </select>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="submit" class="btn btn-primary" id="compRegister">Enviar</button>
               </form>
             </div>
             <div class="modal-footer">
