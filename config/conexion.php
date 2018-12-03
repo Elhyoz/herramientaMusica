@@ -32,13 +32,9 @@
     }
 
     function limpiarCadena($var){
-      if( isset($var) ){
-        global $conexion;
-        $str = mysqli_real_escape_string($conexion, trim($var));
-        return htmlspecialchars($str);
-      }
-      else
-        return "null";
+      global $conexion;
+      $str = mysqli_real_escape_string($conexion, trim($var));
+      return htmlspecialchars($str);
     }
   }
 

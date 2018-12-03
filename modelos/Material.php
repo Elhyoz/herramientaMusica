@@ -18,6 +18,11 @@ Class Material{
 		return ejecutarConsulta($sql);
 	}
 
+	public function verificar($partitura, $video){
+		$sql = "SELECT * FROM material WHERE partitura=$partitura AND video=$video";
+		return ejecutarConsulta($sql);
+	}
+
 }
 
 ?>

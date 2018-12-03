@@ -8,6 +8,7 @@
 <!-- Fin del footer -->
 
 <script src="js/bootstrapjs/jquery.js"></script>
+<script type="text/javascript" src="jquery.leanModal.min.js"></script>
 <script src="js/bootstrapjs/bootstrap.min.js"></script>
 
 
