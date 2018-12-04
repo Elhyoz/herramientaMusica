@@ -1,5 +1,4 @@
 <?php
-
 require "../config/conexion.php";
 
 Class Material{

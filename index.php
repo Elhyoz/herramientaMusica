@@ -26,7 +26,7 @@
               <form action="" method="post" id="targetSignUp">
                 <div class="form-group">
                   <label for="uname">Correo o usuario:</label>
-                  <input type="text" class="form-control" id="usr" name="username" required>
+                  <input type="text" class="form-control" id="usr" name="email" required>
                 </div>
                 <div class="form-group">
                   <label for="pwd">Contraseña:</label>
@@ -68,21 +68,21 @@
 
                   <div class="form-group">
                     <label for="uname">Apellido Paterno:</label>
-                    <input type="text" class="form-control" id="apP" name="username" required>
+                    <input type="text" class="form-control" id="apP" name="apPaterno" required>
                   </div>
 
                   <div class="form-group">
                     <label for="uname">Apellido Materno:</label>
-                    <input type="text" class="form-control" id="apM" name="username" required>
+                    <input type="text" class="form-control" id="apM" name="apMaterno" required>
                   </div>
 
                   <div class="form-group">
                     <label for="uname">Número de boleta:</label>
-                    <input type="number" class="form-control" id="numBoleta" name="username" required>
+                    <input type="number" class="form-control" id="numBoleta" name="numBoleta" required>
                   </div>
 
                   <label for="uname">Correo:</label>
-                  <input type="text" class="form-control" id="email" name="username" required>
+                  <input type="text" class="form-control" id="email" name="email" required>
                 </div>
 
                 <div class="form-group">
@@ -92,15 +92,15 @@
 
                 <div class="form-group">
                   <label for="repeatPwd">Repite la contraseña:</label>
-                  <input type="password" class="form-control" id="repeatPwd" name="password" required>
+                  <input type="password" class="form-control" id="repeatPwd" name="repeatPwd" required>
                 </div>
 
                 <div class="form-group">
                   <label for="sel1">Eres ... </label>
-                  <select class="form-control" id="usrLevel">
-                    <option>Alumno</option>
-                    <option>Maestro</option>
-                    <option>Ad</option>
+                  <select class="form-control" id="usrLevel" name="tipoUsuario">
+                    <option value="1">Alumno</option>
+                    <option value="2">Maestro</option>
+                    <option value="3">Ad</option>
                   </select>
                 </div>
 

@@ -1,30 +1,44 @@
 
-var user, email, pass, numBoleta, apPaterno, apMaterno, repeatPwd, arrayForm;
+var user, email, pass, numBoleta, apPaterno, apMaterno, repeatPwd, arrayForm, url, usrLevel;
+
+var data;
 
 
 $("#targetSignUp").submit(function(event) {
-  user = $("#usr").val();
-  email = $("#usr").val();
-  pass = $("#pwd").val();
-  console.log(user);
-  console.log(pass);
+  event.preventDefault();
+
+  var formData = new FormData($("#targetSignUp")[0]);
+  var url = "http://localhost/dashboard/herramientaMusica/API/usuarios.php";
+
+  fetch(url + "?op=verificar", {
+    method: 'POST',
+    body: formData,
+  })
+  .then(response => console.log(response.json()));
 
 });
 
 
 $("#targetRegister").submit(function(event){
-  user = $("#nameUser").val();
-  email = $("#email").val();
+  event.preventDefault();
+  var formData = new FormData($("#targetRegister")[0]);
+  var url = "http://localhost/dashboard/herramientaMusica/API/usuarios.php";
+
   pass = $("#pass").val();
   repeatPwd = $("#repeatPwd").val();
-  numBoleta = $("#numBoleta").val();
-  apPaterno = $("#apP").val();
-  apMaterno = $("#apM").val();
+
 
   if(pass != repeatPwd){
-    alert("Contaseñas no coinciden.");
-    event.preventDefault();
+    alert("Las contraseñas no coinciden. Vuelve a intentarlo");
   }
 
+  fetch(url + "?op=insertar", {
+    method: 'POST',
+    body: formData,
+
+  })
+  .then(response => console.log(response.json()));
+/*  .catch(error => console.error('Error:', error))
+  .then(response => console.log(response));*/
 
 });
