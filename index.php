@@ -26,11 +26,11 @@
               <form action="" method="post" id="targetSignUp">
                 <div class="form-group">
                   <label for="uname">Correo o usuario:</label>
-                  <input type="text" class="form-control" id="usr" name="username">
+                  <input type="text" class="form-control" id="usr" name="username" required>
                 </div>
                 <div class="form-group">
                   <label for="pwd">Contraseña:</label>
-                  <input type="password" class="form-control" id="pwd" name="password">
+                  <input type="password" class="form-control" id="pwd" name="password" required>
                 </div>
                 <button type="submit" class="btn btn-primary">Enviar</button>
               </form>
@@ -63,36 +63,36 @@
 
                   <div class="form-group">
                     <label for="uname">Nombre(s):</label>
-                    <input type="text" class="form-control" id="nameUser" name="username">
+                    <input type="text" class="form-control" id="nameUser" name="username" required>
                   </div>
 
                   <div class="form-group">
                     <label for="uname">Apellido Paterno:</label>
-                    <input type="text" class="form-control" id="apP" name="username">
+                    <input type="text" class="form-control" id="apP" name="username" required>
                   </div>
 
                   <div class="form-group">
                     <label for="uname">Apellido Materno:</label>
-                    <input type="text" class="form-control" id="apM" name="username">
+                    <input type="text" class="form-control" id="apM" name="username" required>
                   </div>
 
                   <div class="form-group">
                     <label for="uname">Número de boleta:</label>
-                    <input type="number" class="form-control" id="numBoleta" name="username">
+                    <input type="number" class="form-control" id="numBoleta" name="username" required>
                   </div>
 
                   <label for="uname">Correo:</label>
-                  <input type="text" class="form-control" id="email" name="username">
+                  <input type="text" class="form-control" id="email" name="username" required>
                 </div>
 
                 <div class="form-group">
                   <label for="pwd">Contraseña:</label>
-                  <input type="password" class="form-control" id="pwd" name="password">
+                  <input type="password" class="form-control" id="pass" name="password" required>
                 </div>
 
                 <div class="form-group">
                   <label for="repeatPwd">Repite la contraseña:</label>
-                  <input type="password" class="form-control" id="repeatPwd" name="password">
+                  <input type="password" class="form-control" id="repeatPwd" name="password" required>
                 </div>
 
                 <div class="form-group">

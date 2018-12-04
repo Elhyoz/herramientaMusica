@@ -1,27 +1,30 @@
-var user, email, pwd, numBoleta, apPaterno, apMaterno, repeatPwd, arrayForm;
+
+var user, email, pass, numBoleta, apPaterno, apMaterno, repeatPwd, arrayForm;
+
 
 $("#targetSignUp").submit(function(event) {
+  user = $("#usr").val();
+  email = $("#usr").val();
+  pass = $("#pwd").val();
+  console.log(user);
+  console.log(pass);
 
-  alert("Qué pedo");
-
-
-
-  event.preventDefault();
 });
+
 
 $("#targetRegister").submit(function(event){
   user = $("#nameUser").val();
   email = $("#email").val();
-  pwd = $("#pwd").val();
+  pass = $("#pass").val();
   repeatPwd = $("#repeatPwd").val();
   numBoleta = $("#numBoleta").val();
   apPaterno = $("#apP").val();
   apMaterno = $("#apM").val();
 
+  if(pass != repeatPwd){
+    alert("Contaseñas no coinciden.");
+    event.preventDefault();
+  }
 
-  
-  console.log(pwd);
-  console.log(repeatPwd);
 
-  event.preventDefault();
 });
