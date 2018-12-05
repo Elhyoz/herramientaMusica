@@ -16,28 +16,29 @@
   <!-- Comienza el navbar -->
   <div class="nav-container">
 
-    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md sticky-top">
       <a href="" class="navbar-brand">GuitarTuto</a>
       <ul class="navbar-nav">
 
         <li class="nav-item">
-          <a href="http://localhost/dashboard/herramientaMusica/" class="nav-link">Inicio</a>
+          <a href="#" class="nav-link">Inicio</a>
         </li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Navegación
-          </a>
+          Navegación
+        </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Cursos disponibles</a>
+            <a class="dropdown-item" href="#">Cursos</a>
             <a class="dropdown-item" href="#"></a>
-            <a class="dropdown-item disable" href="#">Diagnóstico</a>
+            <a class="dropdown-item disable" href="#">Evaluar</a>
           </div>
         </li>
       </ul>
       <div class="customPosition">
-        <button class="btn btn-secondary" type="button" data-toggle="modal" data-target="#signupModal" id="sUp">Inicia sesión</button>
-        <button class="btn btn-primary my-2 my-sm-0" type="button" id="register" data-target="#registerModal" data-toggle="modal">Regístrate</button>
+        <span class="navbar-text">
+          Maestro(a): <?php echo "" ?>
+        </span>
       </div>
     </nav>
   </div>

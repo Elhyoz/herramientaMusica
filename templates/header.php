@@ -16,30 +16,19 @@
   <!-- Comienza el navbar -->
   <div class="nav-container">
 
-    <nav class="navbar navbar-dark bg-dark navbar-expand-md sticky-top">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
       <a href="" class="navbar-brand">GuitarTuto</a>
       <ul class="navbar-nav">
 
         <li class="nav-item">
-          <a href="#" class="nav-link">Home</a>
+          <a href="http://localhost/dashboard/herramientaMusica/" class="nav-link">Inicio</a>
         </li>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Navegación
-        </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Tus cursos</a>
-            <a class="dropdown-item" href="#"></a>
-            <a class="dropdown-item disable" href="#">Evaluación</a>
-          </div>
-        </li>
       </ul>
       <div class="customPosition">
-        <form class="form-inline">
-          <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-          <button class="btn btn-primary my-2 my-sm-0" type="submit">Buscar</button>
-        </form>
+        <span class="navbar-text">
+          Evaluación.
+        </span>
       </div>
     </nav>
   </div>
