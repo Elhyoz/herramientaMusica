@@ -55,7 +55,7 @@
 
           <form action="" method="post" id="targetCharge">
             <div class="form-group">
-              <label for="sel1">Selecciona el nivel de la evaluación que deseas realizar </label>
+              <label for="sel1">Selecciona el nivel del contenido a subir </label>
               <select class="form-control" id="usrLevel" name="tipoUsuario">
                 <option value="bas">Básico</option>
                 <option value="inter">Intermedio</option>
