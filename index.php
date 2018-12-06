@@ -59,7 +59,6 @@
             </div>
 
             <div class="modal-body">
-              
               <form action="" method="post" id="targetRegister">
                 <div class="form-group">
 
