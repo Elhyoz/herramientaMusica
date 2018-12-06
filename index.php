@@ -1,4 +1,5 @@
 <?php
+  session_start();
   include_once "templates/indexHeader.php";
 ?>
 <div class="content container-fluid">

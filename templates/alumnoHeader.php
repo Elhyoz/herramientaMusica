@@ -42,7 +42,7 @@
       <button class="btn btn-primary my-2 my-sm-0" type="button" id="register" data-target="#evaluationModal" data-toggle="modal">Evaluación</button>
 
       <div class="customPosition">
-        <span class="navbar-text">Alumno</span>
+        <span class="navbar-text">Alumno: <?php echo $_SESSION["nombre"]; ?></span>
       </div>
 
     </nav>

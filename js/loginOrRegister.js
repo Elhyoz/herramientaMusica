@@ -7,15 +7,16 @@ var data;
 $("#targetSignUp").submit(function(event) {
   event.preventDefault();
 
-  // var formData = new FormData($("#targetSignUp")[0]);
-  //
-  // var url = "http://localhost/dashboard/herramientaMusica/API/usuarios.php";
-  //
-  // fetch(url + "?op=verificar", {
-  //   method: 'POST',
-  //   body: formData,
-  // })
-  // .then(response => console.log(response.json()));
+  var formData = new FormData($("#targetSignUp")[0]);
+
+  var url = "http://localhost/dashboard/herramientaMusica/API/usuarios.php";
+
+  fetch(url + "?op=verificar", {
+    method: 'POST',
+    body: formData,
+  })
+  .then(response => console.log(response.json()))
+  .catch(error => console.error('Error:', error));
 
 });
 
@@ -38,8 +39,8 @@ $("#targetRegister").submit(function(event){
     method: 'POST',
     body: formData,
   })
-  .then(response => window.location.replace("http://localhost/dashboard/herramientaMusica/maestro.php"));
-/*  .catch(error => console.error('Error:', error))
-  .then(response => console.log(response));*/
+  .then(response => window.location.replace("http://localhost/dashboard/herramientaMusica/maestro.php"))
+  .catch(error => console.error('Error:', error));
+  /*.then(response => console.log(response));*/
 
 });

@@ -1,4 +1,5 @@
 <?php
+  
   include_once "templates/alumnoHeader.php";
 ?>
   <!-- Comienza el contenido de la página -->
