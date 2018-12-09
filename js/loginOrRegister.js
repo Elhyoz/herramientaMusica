@@ -39,8 +39,8 @@ $("#targetRegister").submit(function(event){
     method: 'POST',
     body: formData,
   })
-  .then(response => window.location.replace("http://localhost/dashboard/herramientaMusica/maestro.php"))
-  .catch(error => console.error('Error:', error));
+  // .then(response => window.location.replace("http://localhost/dashboard/herramientaMusica/maestro.php"))
+  // .catch(error => console.error('Error:', error));
   /*.then(response => console.log(response));*/
 
 });
