@@ -1,5 +1,12 @@
 <?php
   session_start();
+  /*para cuando se cierra sesion
+  $cerrar_sesion = $_GET['cerrar_sesion'];
+
+    
+    if ($cerrar_sesion) {
+      session_destroy();
+    }*/
   include_once "templates/indexHeader.php";
 ?>
 <div class="content container-fluid">
