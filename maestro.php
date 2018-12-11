@@ -55,12 +55,7 @@
 
           <form action="" method="post" id="targetCharge">
             <div class="form-group">
-              <label for="sel1">Selecciona el nivel del contenido a subir </label>
-              <select class="form-control" id="usrLevel" name="tipoUsuario">
-                <option value="bas">Básico</option>
-                <option value="inter">Intermedio</option>
-                <option value="avan">Avanzado</option>
-              </select>
+              <input type="file" name="file" value="tutorial">
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
           </form>
@@ -73,9 +68,6 @@
 
     </div>
   </div>
-
-
-
 
 
 
