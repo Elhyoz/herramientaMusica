@@ -37,19 +37,34 @@ $("#targetRegister").submit(function(event){
     event.preventDefault();
   }
 
-  $.ajax({
-    type: 'POST',
-    url: url,
-    data: String(formData),
-    dataType: 'json',
-    success: 'callback'
-});
 
-  if(usrLevel == 1){
-    location.replace("http://localhost/dashboard/herramientaMusica/alumno.php");
-  } else if (usrLevel == 2) {
-    location.replace("http://localhost/dashboard/herramientaMusica/maestro.php")
-  }
+  $.ajax({
+    url: "API/usuarios.php?op=insertar",
+    type: "POST",
+    data: formData,
+    contentType: false,
+    processData: false,
+
+    success: function(datos){
+      if(datos == "Error al registrar"){
+        alert(datos)
+      } else {
+        jzon = JSON.parse(datos)
+        console.log(jzon)
+        if(jzon.usrLevel == '1'){
+          location.replace("http://localhost/dashboard/herramientaMusica/alumno.php")
+        } else if(jzon.usrLevel == '2'){
+          location.replace("http://localhost/dashboard/herramientaMusica/maestro.php")
+        } else {
+          console.log("hubo un error" + jzon.usrLevel)
+        }
+      }
+    },
+    error: function(e){
+      alert("hubo un error")
+      console.log(e)
+    }
+  });
 
 
 

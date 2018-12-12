@@ -5,13 +5,13 @@
 
   $usuario = new Usuario();
 
-  $username = isset($_GET["username"]) ? "'" . limpiarCadena($_GET["username"]) . "'" : "null";
-  $apPaterno = isset($_GET["apPaterno"]) ? "'" .  limpiarCadena($_GET["apPaterno"]) . "'" : "null";
-  $apMaterno = isset($_GET["apMaterno"]) ? "'" .  limpiarCadena($_GET["apMaterno"]) . "'" : "null";
-  $email = isset($_GET["email"]) ? "'" .  limpiarCadena($_GET["email"]) . "'" : "null";
-  $numBoleta = isset($_GET["numBoleta"]) ? "'" .  limpiarCadena($_GET["numBoleta"]) . "'" : "null";
-  $password = isset($_GET["password"]) ? "'" .  limpiarCadena($_GET["password"]) . "'" : "null";
-  $tipoUsuario = isset($_GET["tipoUsuario"]) ? "'" .  limpiarCadena($_GET["tipoUsuario"]) . "'" : "null";
+  $username = isset($_POST["username"]) ? "'" . limpiarCadena($_POST["username"]) . "'" : "null";
+  $apPaterno = isset($_POST["apPaterno"]) ? "'" .  limpiarCadena($_POST["apPaterno"]) . "'" : "null";
+  $apMaterno = isset($_POST["apMaterno"]) ? "'" .  limpiarCadena($_POST["apMaterno"]) . "'" : "null";
+  $email = isset($_POST["email"]) ? "'" .  limpiarCadena($_POST["email"]) . "'" : "null";
+  $numBoleta = isset($_POST["numBoleta"]) ? "'" .  limpiarCadena($_POST["numBoleta"]) . "'" : "null";
+  $password = isset($_POST["password"]) ? "'" .  limpiarCadena($_POST["password"]) . "'" : "null";
+  $tipoUsuario = isset($_POST["tipoUsuario"]) ? "'" .  limpiarCadena($_POST["tipoUsuario"]) . "'" : "null";
 
 
   /*$video = limpiarCadena($_GET["video"]);
@@ -26,7 +26,15 @@
   switch ($_GET['op']) {
     case 'insertar':
       $status = $usuario->insertar($username, $apPaterno, $apMaterno, $email, $password, $tipoUsuario);
-      echo $status ? json_encode("insertado") : json_encode("nel :v");
+      if($status){
+        $_SESSION["nombre"] = $username;
+        $_SESSION["apPaterno"] = $apPaterno;
+        $_SESSION["apMaterno"] = $apMaterno;
+        $_SESSION["email"] = $email;
+        $_SESSION["password"] = $password;
+        $_SESSION["tipoUsuario"] = $tipoUsuario;
+      }
+      echo $status ? json_encode(["status" => "insertado", "usrLevel" => $_POST['tipoUsuario']]) : "Error al registrar";
       break;
     case 'listar':
       $data = Array();
@@ -34,9 +42,12 @@
       if($consulta != false)
         while($reg = $consulta->fetch_object()){
           $data[] = [
-            "partitura" => $reg->partitura,
-            "video" => $reg->video,
-            "id" => $reg->idMaterial
+            "idUsuario" => $reg->idUsuario,
+            "nombre" => $reg->nombre,
+            "apPaterno" => $reg->apPaterno,
+            "email" => $reg->email,
+            "numBoleta" => $reg->numBoleta,
+            "tipoUsuario" =>$reg->tipoUsuario
           ];
         }
       echo json_encode($data);
