@@ -17,11 +17,11 @@
   <div class="nav-container">
 
     <nav class="navbar navbar-dark bg-dark navbar-expand-md sticky-top">
-      <a href="" class="navbar-brand">GuitarTuto</a>
+      <a href="http://localhost/dashboard/herramientaMusica" class="navbar-brand">GuitarTuto</a>
       <ul class="navbar-nav">
 
         <li class="nav-item">
-          <a href="#" class="nav-link">Inicio</a>
+          <a href="http://localhost/dashboard/herramientaMusica" class="nav-link">Inicio</a>
         </li>
 
         <li class="nav-item dropdown">
