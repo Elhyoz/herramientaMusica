@@ -20,6 +20,20 @@
   */
   switch ($_GET['op']) {
     case 'insertar':
+
+      if(file_exists($_FILES['imagen']['tmp_name']) && is_uploaded_file($_FILES['imagen']['tmp_name'])) {
+        $ext = explode(".", $_FILES["imagen"]["name"]);
+        if(($_FILES['imagen']['type'] == "image/jpg") || ($_FILES['imagen']['type'] == "image/jpeg") || ($_FILES['imagen']['type'] == "image/png")){
+          $imagen = round(microtime(true)) . '.' . end($ext);
+          move_uploaded_file($_FILES["imagen"]["tmp_name"], "../img/" . $imagen);
+        }
+      }
+
+      /*
+        Hasta aqui se tiene el nombre de la imagen, almacenada en "/img/$imagen", y la misma almacenada en el servidor. 
+        Falta almacenar su nombre en la base de datos, para tener acceso a ella
+      */
+
       $status = $material->insertar($partitura, $video, $libro, $ejercicio);
       echo $status ? "insertado" : "nel :v";
       break;
