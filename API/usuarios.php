@@ -25,8 +25,9 @@
 	*/
 	switch ($_GET['op']) {
 		case 'insertar':
-			$status = $usuario->insertar($username, $apPaterno, $apMaterno, $email, $password, $tipoUsuario);
+			$status = $usuario->insertar($username, $apPaterno, $apMaterno, $email, $password, $tipoUsuario, $numBoleta);
 			if($status){
+				$SESSION["numBoleta"] = $numBoleta;
 				$_SESSION["nombre"] = $username;
 				$_SESSION["apPaterno"] = $apPaterno;
 				$_SESSION["apMaterno"] = $apMaterno;

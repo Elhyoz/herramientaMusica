@@ -7,8 +7,8 @@ Class Usuario{
 
   }
 
-  public function insertar($nombre, $apPaterno, $apMaterno, $email, $password, $tipoUsuario){
-    $sql =  "INSERT INTO usuario (nombre, apPaterno, apMaterno, email, password, tipoUsuario) VALUES ($nombre, $apPaterno, $apMaterno, $email, $password, $tipoUsuario)";
+  public function insertar($nombre, $apPaterno, $apMaterno, $email, $password, $tipoUsuario, $numBoleta){
+    $sql =  "INSERT INTO usuario (nombre, apPaterno, apMaterno, email, password, tipoUsuario, numBoleta) VALUES ($nombre, $apPaterno, $apMaterno, $email, $password, $tipoUsuario, $numBoleta)";
     return ejecutarConsulta($sql);
   }
 
